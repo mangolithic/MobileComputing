@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.077" />
 
-    <TextView
+    <!--<TextView
         android:id="@+id/txtResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,7 +34,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.068"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />-->
 
     <Button
         android:id="@+id/btnZero"
@@ -43,6 +43,7 @@
         android:text="@string/btnZero"
         android:textSize="35sp"
         app:backgroundTint="#C8672B"
+        android:onClick="btnClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.631"
@@ -56,6 +57,7 @@
         android:layout_height="wrap_content"
         android:text="@string/btnFive"
         android:textSize="35sp"
+        android:onClick="btnClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.337"
@@ -84,6 +86,7 @@
         android:layout_height="wrap_content"
         android:text="@string/btnEight"
         android:textSize="35sp"
+        android:onClick="btnClick"
         app:backgroundTint="#C8672B"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -112,6 +115,7 @@
         android:layout_height="wrap_content"
         android:text="@string/btnNine"
         android:textSize="35sp"
+        android:onClick="btnClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.616"
@@ -127,13 +131,15 @@
         android:text="@string/btnClear"
         android:textColor="@color/black"
         android:textSize="35sp"
+        android:onClick="btnClick"
         app:backgroundTint="#F17122"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.787" />
+        app:layout_constraintVertical_bias="0.787"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/btnFour"
@@ -141,6 +147,7 @@
         android:layout_height="wrap_content"
         android:text="@string/btnFour"
         android:textSize="35sp"
+        android:onClick="btnClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.04"
@@ -155,6 +162,7 @@
         android:layout_height="wrap_content"
         android:text="@string/btnOne"
         android:textSize="35sp"
+        android:onClick="btnClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.04"
@@ -183,6 +191,7 @@
         android:layout_height="wrap_content"
         android:text="@string/btnThree"
         android:textSize="35sp"
+        android:onClick="btnClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.631"
@@ -226,6 +235,7 @@
         android:layout_height="wrap_content"
         android:text="@string/btnSix"
         android:textSize="35sp"
+        android:onClick="btnClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.631"
@@ -240,6 +250,7 @@
         android:layout_height="wrap_content"
         android:text="@string/btnSeven"
         android:textSize="35sp"
+        android:onClick="btnClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.04"
@@ -254,6 +265,7 @@
         android:layout_height="wrap_content"
         android:text="@string/btnTwo"
         android:textSize="35sp"
+        android:onClick="btnClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.337"
