@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     TextView textViewInput;
+    String var1="";
+    String function = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,4 +61,50 @@ public class MainActivity extends AppCompatActivity {
         }
         textViewInput.setText(input);
     }
+
+    public void opClick (View v) {
+        var1=textViewInput.getText().toString();
+        switch (v.getId()){
+            case R.id.btnDivide: function="/";
+                break;
+
+            case R.id.btnMultiply: function="*";
+                break;
+
+            case R.id.btnSubtract: function="-";
+                break;
+
+            case R.id.btnPlus: function="+";
+                break;
+        }
+    }
+
+    public void equalClick(View v) {
+        String var2 = textViewInput.getText().toString();
+        double ans = 0.000;
+        switch (function){
+            case "/":
+                ans = Double.parseDouble(var1)/Double.parseDouble(var2);
+                break;
+
+            case "*":
+                ans = Double.parseDouble(var1)*Double.parseDouble(var2);
+                break;
+
+            case "+":
+                ans = Double.parseDouble(var1)+Double.parseDouble(var2);
+                break;
+
+            case "-":
+                ans = Double.parseDouble(var1)-Double.parseDouble(var2);
+                break;
+        }
+        textViewInput.setText(ans+"");
+    }
+
+    public void clear (View v){
+        textViewInput.setText("");
+
+    }
+
 }
