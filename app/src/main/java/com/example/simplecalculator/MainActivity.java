@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    boolean isNewClick = true;
     TextView textViewInput;
     String var1="";
     String function = "";
@@ -23,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("NonConstantResourceId")
     public void btnClick (View v) {
+        if(isNewClick)
+            textViewInput.setText("");
+        isNewClick = false;
         String input = textViewInput.getText().toString();
         switch (v.getId()) {
             case R.id.btnZero:
@@ -55,14 +60,16 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btnNine:
                 input += "9";
                 break;
-            case R.id.btnClear:
-                input =  "";
+            case R.id.btnPoint:
+                input +=".";
                 break;
         }
         textViewInput.setText(input);
     }
 
+    @SuppressLint("NonConstantResourceId")
     public void opClick (View v) {
+        isNewClick = true;
         var1=textViewInput.getText().toString();
         switch (v.getId()){
             case R.id.btnDivide: function="/";
@@ -79,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     public void equalClick(View v) {
         String var2 = textViewInput.getText().toString();
         double ans = 0.000;
@@ -102,9 +110,9 @@ public class MainActivity extends AppCompatActivity {
         textViewInput.setText(ans+"");
     }
 
-    public void clear (View v){
-        textViewInput.setText("");
-
+    public void clearClick (View v){
+        textViewInput.setText(null);
+        isNewClick = true;
     }
 
 }
